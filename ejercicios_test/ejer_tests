@@ -1,0 +1,98 @@
+
+1) Explica el fallo (qué está mal en el código). Describe de manera precisa el fallo y
+propón una modificación al código que lo arregle.
+
+	--CountPositive
+	El fallo del codigo es que el cero es considerado como positivo, pero natural.
+
+	--LastZero
+	El fallo de este código es que retorna la posicion del primer cero, no del último.
+
+	--FindLast
+	El fallo es que nunca llegamos a la posicion 0 del array.
+
+	--OddOrPositive
+	Los numeros impares negativos no son considerados.
+
+
+2) Proporciona, si ello es posible, un caso de prueba que no ejecute el código que
+tiene el fallo. Si no es posible, explica por qué. Para cada caso de prueba indica
+los datos usados en la prueba, el resultado esperado y el resultado obtenido.
+
+	--CountPositive
+	Si a la funcion le pasamos un array vacio, no se ejecuta el codigo con el fallo
+	y se lanza la excepcion.
+
+
+	--LastZero
+	Eleva una excepcion si pasamos array vacio.
+
+	--FindLast
+	Si el array esta vacio.
+
+	--OddOrPositive
+	Lista vacia se lanza excepcion.
+
+
+3) Si es posible, proporciona un caso de prueba que ejecuta el fallo que hay en el
+código, pero que no provoque un error en el estado. Si no se puede, explica por
+qué.
+	--CountPositive
+	Los casos de prueba han sido pasar a la funcion un array con 3 positives, otro
+	array con el primero negativo y 2 positives, y otro con 3 negativos y 0 positives.
+	Los tests han funcionado correctamente.
+
+	--LastZero
+	No provocara error si el array contiene unicamente un cero.
+
+	--FindLast
+	Si el numero que buscamos no esta en la posicion 0.
+
+	--OddOrPositive
+	Considrando un array con numeros negativos pares, 0 y positivos.
+	
+
+
+4) Si es posible, proporciona un caso de prueba que provoque un error en el estado,
+pero que no acabe provocando una disfunción en el comportamiento del
+programa. No olvides que el contador de programa forma parte, junto a las
+variables, del estado del programa. Si no es posible, explica por qué.
+
+	--CountPositive
+	No es posible puesto que siempre considerara el cero como positivo.
+
+	--LastZero
+	Si el array con tiene varios elementos entre ellos un cero o cuando no hay ceros.
+
+	--FindLast
+	Si hay error de estado siempre va a dar lugar a una disfuncion, es decir, cuando
+	el numero buscado esta la primera posicion.
+
+	--OddOrPos
+	No es posible puesto que nunca se consideran impares negativos.
+
+
+6) Ejecuta en programas Java el código corregido y pruébalo con los casos de
+prueba creados en apartados anteriores
+	--CountPositive
+	Para corregir el fallo cambiamos la condicion del if a x > 0.
+
+	--lastZero
+	El bucle debe ser regresivo, es decir empezar a buscar desde la ultima posicion.
+	
+	--FindLast
+	En la condicion del for cambiamos x > 0 por x >= 0.
+
+	--OddOrPos
+	Añadimos una nueva condicion considerando si el resto es -1 en la sentencia if.
+
+
+
+
+
+
+
+
+
+
+
